@@ -52,7 +52,8 @@
 
     <ul class="navbar__menu">
       <li><a href="#inicio">Início</a></li>
-      <li><a href="#paroquia">Paróquia</a></li>
+      <li><a href="#historia">A Paróquia</a></li>
+      <li><a href="#missas">Missas</a></li>
       <li><a href="#sacramentos">Sacramentos</a></li>
       <li><a href="#comunidades">Comunidades</a></li>
       <li><a href="#contato">Contato</a></li>
@@ -80,7 +81,7 @@
       <div class="hero__slide hero__slide--2">
         <div class="hero__conteudo">
           <h1 class="hero__titulo">Nossos Pastores</h1>
-          <p class="hero__subtitulo">Pe. Edmilton Mota — Pároco &nbsp;|&nbsp; Pe. Tony Moreira — Vigário</p>
+          <p class="hero__subtitulo">Pe. Edimilto Mota — Pároco &nbsp;|&nbsp; Pe. Tony Moreira — Vigário</p>
         </div>
       </div>
 
@@ -107,9 +108,9 @@
   <section id="paroquia" class="padres">
     <div class="padre__card">
       <div class="padre__foto padre__foto--1">
-        <img src="img/Padre Edimilto.jpg" alt="Pe. Edmilton Mota">
+        <img src="img/Padre Edimilto.jpg" alt="Pe. Edimilto dos Santos Mota">
       </div>
-      <h3 class="padre__nome">Pe. Edmilton Mota</h3>
+      <h3 class="padre__nome">Pe. Edimilto Mota</h3>
       <p class="padre__cargo">Pároco</p>
     </div>
 
@@ -120,10 +121,41 @@
 
     <div class="padre__card">
       <div class="padre__foto padre__foto--2">
-        <img src="img/Padre Tony.jpg" alt="Pe. Tony Moreira">
+        <img src="img/Padre Tony.jpg" alt="Pe. Tony Aparecido Moreira">
       </div>
       <h3 class="padre__nome">Pe. Tony Moreira</h3>
       <p class="padre__cargo">Vigário</p>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO SOBRE / HISTÓRIA                     -->
+  <!-- ========================================= -->
+  <section id="historia" class="secao historia">
+    <h2 class="secao__titulo">Sobre a Paróquia</h2>
+    <div class="secao__linha"></div>
+
+    <div class="historia__conteudo">
+      <p>
+        A Paróquia Nossa Senhora Mãe dos Homens, em Cuiabá, foi fundada em 1960
+        pelos frades franciscanos. Sua igreja foi erguida em um terreno amplo,
+        ideal para acolher os fiéis que antes frequentavam a pequena Capela do
+        Lavapés — tão modesta que mais se assemelhava a um oratório, com uma
+        lagoa em frente onde os viajantes lavavam os pés.
+      </p>
+      <p>
+        A devoção já era evidente antes da fundação oficial: em 1955 foi celebrada
+        a primeira missa campal no local, reunindo a comunidade e mostrando a
+        importância de criar uma nova paróquia. Desde então, a comunidade se
+        fortaleceu como ponto de encontro para a evangelização e a vivência da fé.
+      </p>
+      <p>
+        Fazem parte da paróquia a Comunidade Nossa Senhora do Carmo, uma das mais
+        antigas devoções marianas, e a bicentenária Igreja Nossa Senhora da Boa
+        Morte — concluída em 1810 em taipa de pilão, na Praça Dr. Antônio Correa.
+        Restaurada em 2010, é uma relíquia das tradições cuiabanas, com arquitetura
+        de elementos barrocos e neoclássicos e altares históricos.
+      </p>
     </div>
   </section>
 
@@ -167,29 +199,47 @@
   </section>
 
   <!-- ========================================= -->
-  <!-- SEÇÃO CALENDÁRIO                          -->
+  <!-- SEÇÃO HORÁRIOS DE MISSAS                  -->
   <!-- ========================================= -->
-  <section class="secao calendario">
-    <h2 class="secao__titulo">Calendário Paroquial</h2>
+  <section id="missas" class="secao missas">
+    <h2 class="secao__titulo">Horários de Missas</h2>
     <div class="secao__linha"></div>
 
-    <div class="calendario__grid">
-      <div class="calendario__card">
-        <span class="calendario__data">Dom, 22 Jun</span>
-        <h4 class="calendario__evento">Missa Solene</h4>
-        <p class="calendario__hora">09:00 — Matriz</p>
+    <div class="missas__grid">
+      <div class="missa__card">
+        <span class="missa__dia">Segunda-feira</span>
+        <p class="missa__hora">19h</p>
       </div>
-      <div class="calendario__card">
-        <span class="calendario__data">Sáb, 28 Jun</span>
-        <h4 class="calendario__evento">Batismo Comunitário</h4>
-        <p class="calendario__hora">15:00 — Matriz</p>
+      <div class="missa__card">
+        <span class="missa__dia">Terça-feira</span>
+        <p class="missa__hora">7h / 19h</p>
       </div>
-      <div class="calendario__card">
-        <span class="calendario__data">Dom, 06 Jul</span>
-        <h4 class="calendario__evento">Festa da Padroeira</h4>
-        <p class="calendario__hora">08:00 — Procissão</p>
+      <div class="missa__card">
+        <span class="missa__dia">Quarta-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Quinta-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Sexta-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Sábado</span>
+        <p class="missa__hora">18h</p>
+      </div>
+      <div class="missa__card missa__card--destaque">
+        <span class="missa__dia">Domingo</span>
+        <p class="missa__hora">7h / 9h30 / 17h / 19h</p>
       </div>
     </div>
+
+    <p class="missas__nota">
+      <i class="fas fa-info-circle"></i>
+      Toda primeira sexta-feira do mês há celebração da Santa Missa ao meio-dia.
+    </p>
   </section>
 
   <!-- ========================================= -->
@@ -291,10 +341,9 @@
       <div class="rodape__contato">
         <h4>Contato</h4>
         <p>
-          Cuiabá — MT<br>
-          (65) 3322-0000<br>
-          <i class="fab fa-whatsapp"></i> (65) 99999-0000<br>
-          paroquia@email.com
+          <i class="fas fa-phone"></i> (65) 3057-3708<br>
+          <i class="fab fa-whatsapp"></i> (65) 9 9997-2529<br>
+          <i class="fas fa-envelope"></i> pnsmaedoshomens@cuiabaarquidiocese.net
         </p>
       </div>
 
@@ -313,9 +362,9 @@
       <div class="rodape__endereco">
         <h4>Endereço</h4>
         <p>
-          Praça da República, S/N<br>
-          Centro — Cuiabá/MT<br>
-          CEP 78005-490
+          Rua Marechal Floriano Peixoto, 611<br>
+          Quilombo — Cuiabá/MT<br>
+          CEP 78045-310
         </p>
       </div>
 
