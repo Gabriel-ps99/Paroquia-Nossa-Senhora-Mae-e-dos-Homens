@@ -290,6 +290,14 @@ img {
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
+  overflow: hidden;
+}
+
+.padre__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .padre__foto--1 {
@@ -619,6 +627,51 @@ img {
 .redes__link i {
   font-size: 28px;
   color: #fff;
+}
+
+/* ============================================= */
+/* SEÇÃO MAPA / LOCALIZAÇÃO                       */
+/* ============================================= */
+.mapa {
+  width: 100%;
+  padding: 60px 40px;
+  background: #F4EFE6;
+  text-align: center;
+}
+
+.mapa__titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #1B3A5C;
+  margin-bottom: 8px;
+}
+
+.mapa__desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: rgba(27, 58, 92, 0.7);
+  margin-bottom: 32px;
+}
+
+.mapa__frame {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(13, 34, 64, 0.18);
+  line-height: 0;
+}
+
+.mapa__frame iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .mapa__frame iframe {
+    height: 320px;
+  }
 }
 
 /* ============================================= */
