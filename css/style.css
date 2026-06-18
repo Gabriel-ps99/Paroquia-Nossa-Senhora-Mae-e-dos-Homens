@@ -722,7 +722,7 @@ img {
 
 .rodape__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.4fr 0.8fr 0.8fr;
   gap: 32px;
   max-width: 1000px;
   margin: 0 auto;
@@ -766,10 +766,44 @@ img {
   letter-spacing: 1px;
 }
 
-.rodape__contato p {
+.rodape__contato-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rodape__contato-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
-  line-height: 2;
+  line-height: 1.5;
+}
+
+.rodape__contato-lista li i {
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.rodape__contato-lista li span {
+  overflow-wrap: anywhere;
+}
+
+.rodape__contato-lista li a {
+  color: inherit;
+}
+
+.rodape__contato-lista li a:hover {
+  color: #C9A84C;
+}
+
+.rodape__email {
+  white-space: nowrap;
+  font-size: 12px;
 }
 
 .rodape__links {
