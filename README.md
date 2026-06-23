@@ -80,6 +80,10 @@ Depois acesse `http://localhost:8000`.
 - **E-mail:** pnsmaedoshomens@cuiabaarquidiocese.net
 - **Instagram:** [@arquidiocesedecuiabamt](https://www.instagram.com/arquidiocesedecuiabamt/)
 
+## 🌐 Site Oficial
+
+https://www.maedoshomens.cuiaba.br/
+
 ## 📄 Licença
 
 A versão do tema WordPress está sob licença **GNU GPL v2 ou posterior**. Conteúdo, imagens e marca da paróquia são de uso exclusivo da Paróquia Nossa Senhora Mãe dos Homens.
