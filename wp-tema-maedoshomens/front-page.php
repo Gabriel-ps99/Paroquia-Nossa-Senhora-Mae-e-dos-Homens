@@ -1,0 +1,269 @@
+<?php
+/**
+ * Template da página inicial (home).
+ *
+ * @package maedoshomens
+ */
+
+get_header();
+?>
+
+  <!-- ========================================= -->
+  <!-- HERO / SLIDER                             -->
+  <!-- ========================================= -->
+  <section id="inicio" class="hero">
+    <div class="hero__slider">
+
+      <!-- Slide 1 — Boas-vindas / Fachada -->
+      <div class="hero__slide hero__slide--1">
+        <div class="hero__conteudo">
+          <img src="<?php echo esc_url( get_template_directory_uri() . '/img/logofinal.png' ); ?>" alt="Logo" class="hero__logo">
+          <h1 class="hero__titulo">Seja Bem-Vindo</h1>
+          <p class="hero__subtitulo">Paróquia Nossa Senhora Mãe dos Homens</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 — Pároco e Vigário -->
+      <div class="hero__slide hero__slide--2">
+        <div class="hero__conteudo">
+          <h1 class="hero__titulo">Nossos Pastores</h1>
+          <p class="hero__subtitulo">Pe. Edimilto Mota — Pároco &nbsp;|&nbsp; Pe. Tony Moreira — Vigário</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Setas -->
+    <button class="hero__seta hero__seta--esq" aria-label="Slide anterior">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="hero__seta hero__seta--dir" aria-label="Próximo slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Indicadores -->
+    <div class="hero__indicadores">
+      <button class="hero__dot ativo" aria-label="Slide 1"></button>
+      <button class="hero__dot" aria-label="Slide 2"></button>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO PADRES                              -->
+  <!-- ========================================= -->
+  <section id="paroquia" class="padres">
+    <div class="padre__card">
+      <div class="padre__foto padre__foto--1">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/Pe. Edimilto Mota.jpeg' ); ?>" alt="Pe. Edimilto dos Santos Mota">
+      </div>
+      <h3 class="padre__nome">Pe. Edimilto Mota</h3>
+      <p class="padre__cargo">Pároco</p>
+    </div>
+
+    <div class="padres__centro">
+      <h2 class="padres__titulo">Nossos Pastores</h2>
+      <p class="padres__desc">Servindo com fé e dedicação a comunidade paroquial</p>
+    </div>
+
+    <div class="padre__card">
+      <div class="padre__foto padre__foto--2">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/img/Padre Tony.jpg' ); ?>" alt="Pe. Tony Aparecido Moreira">
+      </div>
+      <h3 class="padre__nome">Pe. Tony Moreira</h3>
+      <p class="padre__cargo">Vigário</p>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO SOBRE / HISTÓRIA                     -->
+  <!-- ========================================= -->
+  <section id="historia" class="secao historia">
+    <h2 class="secao__titulo">Sobre a Paróquia</h2>
+    <div class="secao__linha"></div>
+
+    <div class="historia__conteudo">
+      <p>
+        A Paróquia Nossa Senhora Mãe dos Homens, em Cuiabá, foi fundada em 1960
+        pelos frades franciscanos. Sua igreja foi erguida em um terreno amplo,
+        ideal para acolher os fiéis que antes frequentavam a pequena Capela do
+        Lavapés — tão modesta que mais se assemelhava a um oratório, com uma
+        lagoa em frente onde os viajantes lavavam os pés.
+      </p>
+      <p>
+        A devoção já era evidente antes da fundação oficial: em 1955 foi celebrada
+        a primeira missa campal no local, reunindo a comunidade e mostrando a
+        importância de criar uma nova paróquia. Desde então, a comunidade se
+        fortaleceu como ponto de encontro para a evangelização e a vivência da fé.
+      </p>
+      <p>
+        Fazem parte da paróquia a Comunidade Nossa Senhora do Carmo, uma das mais
+        antigas devoções marianas, e a bicentenária Igreja Nossa Senhora da Boa
+        Morte — concluída em 1810 em taipa de pilão, na Praça Dr. Antônio Correa.
+        Restaurada em 2010, é uma relíquia das tradições cuiabanas, com arquitetura
+        de elementos barrocos e neoclássicos e altares históricos.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO SACRAMENTOS                         -->
+  <!-- ========================================= -->
+  <section id="sacramentos" class="secao sacramentos">
+    <h2 class="secao__titulo">Sacramentos</h2>
+    <div class="secao__linha"></div>
+
+    <div class="sacramentos__grid">
+      <div class="sacramento__card">
+        <i class="fas fa-church"></i>
+        <h3>Missa</h3>
+      </div>
+      <div class="sacramento__card">
+        <i class="fas fa-ring"></i>
+        <h3>Casamento</h3>
+      </div>
+      <div class="sacramento__card">
+        <i class="fas fa-water"></i>
+        <h3>Batismo</h3>
+      </div>
+      <div class="sacramento__card">
+        <i class="fas fa-cross"></i>
+        <h3>Confissão</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO DÍZIMO                              -->
+  <!-- ========================================= -->
+  <section id="dizimo" class="secao dizimo">
+    <h2 class="secao__titulo">Seja um Dizimista</h2>
+    <div class="secao__linha"></div>
+    <p class="dizimo__texto">
+      "Cada um dê conforme determinou em seu coração, não com pesar ou por obrigação, pois Deus ama quem dá com alegria." — 2 Coríntios 9:7
+    </p>
+    <a href="#" class="dizimo__btn">Cadastrar Dízimo</a>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO HORÁRIOS DE MISSAS                  -->
+  <!-- ========================================= -->
+  <section id="missas" class="secao missas">
+    <h2 class="secao__titulo">Horários de Missas</h2>
+    <div class="secao__linha"></div>
+
+    <div class="missas__grid">
+      <div class="missa__card">
+        <span class="missa__dia">Segunda-feira</span>
+        <p class="missa__hora">19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Terça-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Quarta-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Quinta-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Sexta-feira</span>
+        <p class="missa__hora">7h / 19h</p>
+      </div>
+      <div class="missa__card">
+        <span class="missa__dia">Sábado</span>
+        <p class="missa__hora">18h</p>
+      </div>
+      <div class="missa__card missa__card--destaque">
+        <span class="missa__dia">Domingo</span>
+        <p class="missa__hora">7h / 9h30 / 17h / 19h</p>
+      </div>
+    </div>
+
+    <p class="missas__nota">
+      <i class="fas fa-info-circle"></i>
+      Toda primeira sexta-feira do mês há celebração da Santa Missa ao meio-dia.
+    </p>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- BANNER FRASE BÍBLICA                      -->
+  <!-- ========================================= -->
+  <section class="banner-frase">
+    <i class="fas fa-quote-left banner-frase__icone"></i>
+    <p class="banner-frase__texto">
+      "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim."
+    </p>
+    <span class="banner-frase__ref">— João 14:6</span>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO COMUNIDADES                         -->
+  <!-- ========================================= -->
+  <section id="comunidades" class="secao comunidades">
+    <h2 class="secao__titulo">Comunidades</h2>
+    <div class="secao__linha"></div>
+
+    <div class="comunidades__grid">
+      <div class="comunidade__card">
+        <i class="fas fa-church"></i>
+        <h3>Paróquia Mãe dos Homens</h3>
+        <p>Matriz</p>
+      </div>
+      <div class="comunidade__card">
+        <i class="fas fa-cross"></i>
+        <h3>Boa Morte</h3>
+        <p>Comunidade</p>
+      </div>
+      <div class="comunidade__card">
+        <i class="fas fa-pray"></i>
+        <h3>N. Sra. do Carmo</h3>
+        <p>Comunidade</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO REDES SOCIAIS                       -->
+  <!-- ========================================= -->
+  <section class="redes">
+    <h2 class="redes__titulo">Acompanhe-nos</h2>
+    <p class="redes__desc">Transmissões ao vivo e conteúdo da paróquia</p>
+
+    <div class="redes__lista">
+      <a href="https://www.instagram.com/arquidiocesedecuiabamt/" class="redes__link" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/people/Arquidiocese-de-Cuiab%C3%A1-MT/61575241171685/" class="redes__link" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCx9KLNloNE6hFufvxECEb_g" class="redes__link" target="_blank" rel="noopener" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://wa.me/5565999825244" class="redes__link" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================= -->
+  <!-- SEÇÃO MAPA / LOCALIZAÇÃO                  -->
+  <!-- ========================================= -->
+  <section id="localizacao" class="mapa">
+    <h2 class="mapa__titulo">Onde Estamos</h2>
+    <p class="mapa__desc">Venha nos visitar e participar de nossas celebrações</p>
+
+    <div class="mapa__frame">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d993.0325949197398!2d-56.103053379388044!3d-15.591726704319333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x939db19aae3c6efb%3A0xa4fe50ad96700803!2sPar%C3%B3quia%20Nossa%20Senhora%20M%C3%A3e%20dos%20Homens!5e1!3m2!1spt-BR!2sus!4v1781716770738!5m2!1spt-BR!2sus"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Localização da Paróquia Nossa Senhora Mãe dos Homens"></iframe>
+    </div>
+  </section>
+
+<?php
+get_footer();

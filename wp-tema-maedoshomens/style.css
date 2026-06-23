@@ -1,0 +1,988 @@
+/*
+Theme Name: Paróquia Mãe dos Homens
+Theme URI: https://maedoshomens.cuiabaarquidiocese.net
+Author: Gabriel
+Description: Tema da Paróquia Nossa Senhora Mãe dos Homens — Cuiabá/MT. Convertido a partir do site estático.
+Version: 1.0
+Requires at least: 6.0
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: maedoshomens
+*/
+
+/* ============================================= */
+/* PARÓQUIA NOSSA SENHORA MÃE DOS HOMENS        */
+/* Tema: Dourado & Azul                          */
+/* ============================================= */
+
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: #FFFDF7;
+  color: #1B2A4A;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================= */
+/* TOP BAR                                       */
+/* ============================================= */
+.top-bar {
+  width: 100%;
+  background: linear-gradient(135deg, #1B3A5C 0%, #0D2240 100%);
+  padding: 8px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-bar__titulo {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #C9A84C;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.top-bar__direita {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-bar__liturgia {
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.top-bar__redes {
+  display: flex;
+  gap: 10px;
+}
+
+.top-bar__redes a {
+  color: #C9A84C;
+  font-size: 14px;
+}
+
+.top-bar__redes a:hover {
+  opacity: 0.7;
+}
+
+/* ============================================= */
+/* MENU / NAVBAR                                 */
+/* ============================================= */
+.navbar {
+  width: 100%;
+  background: #fff;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar__logo img {
+  height: 60px;
+  width: 60px;
+  object-fit: contain;
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__menu a {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1B3A5C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar__menu a:hover {
+  color: #C9A84C;
+}
+
+.navbar__dizimo {
+  display: inline-block;
+  background: linear-gradient(135deg, #C9A84C, #A8872E);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar__dizimo:hover {
+  opacity: 0.9;
+}
+
+/* Botão hamburguer (mobile) */
+.navbar__toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #1B3A5C;
+  cursor: pointer;
+}
+
+/* ============================================= */
+/* HERO / SLIDE                                  */
+/* ============================================= */
+.hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__slider {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.hero__slide {
+  min-width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero__slide--1 {
+  background: linear-gradient(135deg, #1B3A5C 0%, #0D2240 60%, #C9A84C 100%);
+}
+
+.hero__slide--2 {
+  background: linear-gradient(135deg, #0D2240 0%, #1B3A5C 60%, #C9A84C 100%);
+}
+
+.hero__conteudo {
+  text-align: center;
+  z-index: 2;
+  padding: 0 40px;
+}
+
+.hero__logo {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.hero__titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero__subtitulo {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #C9A84C;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+/* Indicadores do slider */
+.hero__indicadores {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.hero__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero__dot.ativo {
+  background: #C9A84C;
+}
+
+/* Setas do slider */
+.hero__seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.hero__seta:hover {
+  background: rgba(201, 168, 76, 0.5);
+}
+
+.hero__seta--esq {
+  left: 20px;
+}
+
+.hero__seta--dir {
+  right: 20px;
+}
+
+/* ============================================= */
+/* SEÇÃO PADRES                                  */
+/* ============================================= */
+.padres {
+  width: 100%;
+  padding: 60px 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.padre__card {
+  text-align: center;
+}
+
+.padre__foto {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  overflow: hidden;
+}
+
+.padre__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.padre__foto--1 {
+  background: linear-gradient(135deg, #C9A84C, #A8872E);
+}
+
+.padre__foto--2 {
+  background: linear-gradient(135deg, #1B3A5C, #0D2240);
+}
+
+.padre__foto i {
+  font-size: 60px;
+}
+
+.padre__foto--1 i {
+  color: #fff;
+}
+
+.padre__foto--2 i {
+  color: #C9A84C;
+}
+
+.padre__nome {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: #1B3A5C;
+  margin-bottom: 4px;
+}
+
+.padre__cargo {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #C9A84C;
+  font-weight: 600;
+}
+
+.padres__centro {
+  text-align: center;
+}
+
+.padres__titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #1B3A5C;
+  margin-bottom: 8px;
+}
+
+.padres__desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  color: #666;
+  max-width: 300px;
+}
+
+/* ============================================= */
+/* SEÇÃO GENÉRICA                                */
+/* ============================================= */
+.secao {
+  width: 100%;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.secao__titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #1B3A5C;
+  margin-bottom: 8px;
+}
+
+.secao__linha {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #C9A84C, #A8872E);
+  margin: 0 auto 40px;
+}
+
+/* ============================================= */
+/* SACRAMENTOS                                   */
+/* ============================================= */
+.sacramentos {
+  background: #F5F0E6;
+}
+
+.sacramentos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sacramento__card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s;
+}
+
+.sacramento__card:hover {
+  transform: translateY(-4px);
+}
+
+.sacramento__card i {
+  font-size: 40px;
+  color: #C9A84C;
+  margin-bottom: 16px;
+}
+
+.sacramento__card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1B3A5C;
+}
+
+/* ============================================= */
+/* DÍZIMO                                        */
+/* ============================================= */
+.dizimo {
+  background: linear-gradient(135deg, #1B3A5C 0%, #0D2240 100%);
+}
+
+.dizimo .secao__titulo {
+  color: #C9A84C;
+}
+
+.dizimo .secao__linha {
+  background: #C9A84C;
+}
+
+.dizimo__texto {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.dizimo__btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #C9A84C, #A8872E);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dizimo__btn:hover {
+  opacity: 0.9;
+}
+
+/* ============================================= */
+/* SOBRE / HISTÓRIA                              */
+/* ============================================= */
+.historia {
+  background: #FFFDF7;
+}
+
+.historia__conteudo {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.historia__conteudo p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(27, 58, 92, 0.85);
+  margin-bottom: 18px;
+}
+
+.historia__conteudo p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================= */
+/* HORÁRIOS DE MISSAS                            */
+/* ============================================= */
+.missas__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.missa__card {
+  background: #fff;
+  border-top: 4px solid #C9A84C;
+  padding: 24px 18px;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.missa__card--destaque {
+  background: #1B3A5C;
+  border-top-color: #C9A84C;
+}
+
+.missa__dia {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #C9A84C;
+}
+
+.missa__hora {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #1B3A5C;
+  margin-top: 8px;
+}
+
+.missa__card--destaque .missa__hora {
+  color: #fff;
+}
+
+.missas__nota {
+  max-width: 920px;
+  margin: 28px auto 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: rgba(27, 58, 92, 0.75);
+}
+
+.missas__nota i {
+  color: #C9A84C;
+  margin-right: 6px;
+}
+
+/* ============================================= */
+/* BANNER FRASE                                  */
+/* ============================================= */
+.banner-frase {
+  width: 100%;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #C9A84C 0%, #A8872E 50%, #1B3A5C 100%);
+  text-align: center;
+}
+
+.banner-frase__icone {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 16px;
+}
+
+.banner-frase__texto {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.banner-frase__ref {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 16px;
+  display: block;
+  letter-spacing: 2px;
+}
+
+/* ============================================= */
+/* COMUNIDADES                                   */
+/* ============================================= */
+.comunidades {
+  background: #F5F0E6;
+}
+
+.comunidades__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comunidade__card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border-top: 4px solid #C9A84C;
+}
+
+.comunidade__card i {
+  font-size: 32px;
+  color: #1B3A5C;
+  margin-bottom: 12px;
+}
+
+.comunidade__card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  color: #1B3A5C;
+}
+
+.comunidade__card p {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  color: #888;
+  margin-top: 6px;
+}
+
+/* ============================================= */
+/* REDES SOCIAIS                                 */
+/* ============================================= */
+.redes {
+  width: 100%;
+  padding: 60px 40px;
+  background: #1B3A5C;
+  text-align: center;
+}
+
+.redes__titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.redes__desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 32px;
+}
+
+.redes__lista {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.redes__link {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #C9A84C, #A8872E);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.redes__link:hover {
+  transform: scale(1.1);
+}
+
+.redes__link i {
+  font-size: 28px;
+  color: #fff;
+}
+
+/* ============================================= */
+/* SEÇÃO MAPA / LOCALIZAÇÃO                       */
+/* ============================================= */
+.mapa {
+  width: 100%;
+  padding: 60px 40px;
+  background: #F4EFE6;
+  text-align: center;
+}
+
+.mapa__titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #1B3A5C;
+  margin-bottom: 8px;
+}
+
+.mapa__desc {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: rgba(27, 58, 92, 0.7);
+  margin-bottom: 32px;
+}
+
+.mapa__frame {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(13, 34, 64, 0.18);
+  line-height: 0;
+}
+
+.mapa__frame iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+@media (max-width: 600px) {
+  .mapa__frame iframe {
+    height: 320px;
+  }
+}
+
+/* ============================================= */
+/* RODAPÉ                                        */
+/* ============================================= */
+.rodape {
+  width: 100%;
+  padding: 60px 40px 30px;
+  background: #0D2240;
+  color: #fff;
+}
+
+.rodape__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 0.8fr 0.8fr;
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.rodape__logo img {
+  height: 160px;
+  width: 160px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.rodape__logo p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+.rodape__logo-redes {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.rodape__logo-redes a {
+  color: #C9A84C;
+  font-size: 16px;
+}
+
+.rodape__logo-redes a:hover {
+  opacity: 0.7;
+}
+
+.rodape h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #C9A84C;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rodape__contato-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rodape__contato-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+.rodape__contato-lista li i {
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.rodape__contato-lista li span {
+  overflow-wrap: anywhere;
+}
+
+.rodape__contato-lista li a {
+  color: inherit;
+}
+
+.rodape__contato-lista li a:hover {
+  color: #C9A84C;
+}
+
+.rodape__email {
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.rodape__links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rodape__links a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.rodape__links a:hover {
+  color: #C9A84C;
+}
+
+.rodape__endereco p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+}
+
+.rodape__copy {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.rodape__copy p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================= */
+/* RESPONSIVO                                    */
+/* ============================================= */
+@media (max-width: 992px) {
+  .sacramentos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .padres {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .rodape__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    padding: 8px 20px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar__menu.aberto {
+    display: flex;
+  }
+
+  .navbar__dizimo--mobile {
+    display: none;
+  }
+
+  .hero__slide {
+    height: 360px;
+  }
+
+  .hero__titulo {
+    font-size: 28px;
+  }
+
+  .hero__subtitulo {
+    font-size: 14px;
+  }
+
+  .secao {
+    padding: 60px 20px;
+  }
+
+  .secao__titulo {
+    font-size: 28px;
+  }
+
+  .sacramentos__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .missas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comunidades__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .banner-frase__texto {
+    font-size: 22px;
+  }
+
+  .redes__lista {
+    gap: 16px;
+  }
+
+  .redes__link {
+    width: 52px;
+    height: 52px;
+  }
+
+  .redes__link i {
+    font-size: 22px;
+  }
+
+  .rodape {
+    padding: 40px 20px 20px;
+  }
+
+  .rodape__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sacramentos__grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+
+  .hero__slide {
+    height: 300px;
+  }
+
+  .hero__logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero__titulo {
+    font-size: 24px;
+  }
+}
