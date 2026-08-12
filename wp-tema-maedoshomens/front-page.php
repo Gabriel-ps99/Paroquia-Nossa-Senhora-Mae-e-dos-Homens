@@ -178,7 +178,7 @@ get_header();
       </div>
       <div class="missa__card missa__card--destaque">
         <span class="missa__dia">Domingo</span>
-        <p class="missa__hora">7h / 9h30 / 17h / 19h</p>
+        <p class="missa__hora">7h / 9h / 11h / 17h / 19h</p>
       </div>
     </div>
 
@@ -233,13 +233,13 @@ get_header();
     <p class="redes__desc">Transmissões ao vivo e conteúdo da paróquia</p>
 
     <div class="redes__lista">
-      <a href="https://www.instagram.com/arquidiocesedecuiabamt/" class="redes__link" target="_blank" rel="noopener" aria-label="Instagram">
+      <a href="https://www.instagram.com/maedoshomenscuiaba/" class="redes__link" target="_blank" rel="noopener" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
-      <a href="https://www.facebook.com/people/Arquidiocese-de-Cuiab%C3%A1-MT/61575241171685/" class="redes__link" target="_blank" rel="noopener" aria-label="Facebook">
+      <a href="https://www.facebook.com/maedoshomenscuiaba" class="redes__link" target="_blank" rel="noopener" aria-label="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://www.youtube.com/channel/UCx9KLNloNE6hFufvxECEb_g" class="redes__link" target="_blank" rel="noopener" aria-label="YouTube">
+      <a href="https://www.youtube.com/@paroquianossasenhoramaedos5827" class="redes__link" target="_blank" rel="noopener" aria-label="YouTube">
         <i class="fab fa-youtube"></i>
       </a>
       <a href="https://wa.me/5565999825244" class="redes__link" target="_blank" rel="noopener" aria-label="WhatsApp">

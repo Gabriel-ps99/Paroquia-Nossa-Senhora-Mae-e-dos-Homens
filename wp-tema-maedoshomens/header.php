@@ -26,11 +26,11 @@
   <div class="top-bar">
     <span class="top-bar__titulo">Arquidiocese de Cuiabá</span>
     <div class="top-bar__direita">
-      <span class="top-bar__liturgia">Liturgia Diária</span>
+      <a class="top-bar__liturgia" href="https://liturgia.cancaonova.com/pb/" target="_blank" rel="noopener">Liturgia Diária</a>
       <div class="top-bar__redes">
-        <a href="https://www.instagram.com/arquidiocesedecuiabamt/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/people/Arquidiocese-de-Cuiab%C3%A1-MT/61575241171685/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.youtube.com/channel/UCx9KLNloNE6hFufvxECEb_g" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/maedoshomenscuiaba/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/maedoshomenscuiaba" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@paroquianossasenhoramaedos5827" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         <a href="https://wa.me/5565999825244" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
       </div>
     </div>
